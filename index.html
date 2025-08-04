@@ -7,40 +7,65 @@
     <link rel="stylesheet" href="./static/styles/style.css">
     <link rel="stylesheet" href="./static/assets/font.css">
     <link rel="stylesheet" href="./static/styles/mobile-responsive.css">
+    <link rel="stylesheet" href="./static/styles/navigation.css">
     <!-- dependancies -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- scripts -->
+     <script src="./static/scripts/script.js"></script>
 </head>
 <body>
     <header>
-        <div class="logo">SwimFitRepublic</div>
-        <div class="navigation">
-            <a href="#" class="nav-link">Home</a>
-            <a href="#" class="nav-link">About us</a>
-            <a href="#" class="nav-link">Courses</a>
-            <a href="#" class="nav-link">membership</a>
-            <a href="#" class="nav-link">pages <span class="fa fa-angle-down"></span></a>
-            <a href="#" class="nav-link cta-button"><span class="fa fa-phone"></span> Contact us</a>
+        <div class="logo">
+            <img src="./static/assets/swim-fit-logo.png" alt="">
+            <div class="logo-body">
+                <h2>Swim Fit Republiq</h2>
+                <p>"Swim fit, fits your life"</p>
+            </div>
         </div>
+        <div class="navigation" id="sideNav">
+            <div class="nav-container">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About us</a>
+                <a href="#service" class="nav-link">Courses</a>
+                <!-- <a href="#" class="nav-link">membership</a> -->
+                <a href="#" class="nav-link">pages <span class="fa fa-angle-down"></span></a>
+                <a href="#" class="nav-link cta-button"><span class="fa fa-phone"></span> Contact us</a>
+            </div>
+            <div class="nav-other">
+                <div class="socials-container">
+                    <ul>
+                        <li><a href="#" class="fa-brands fa-instagram"></a></li>
+                        <li><a href="#" class="fa-brands fa-twitter"></a></li>
+                        <li><a href="#" class="fa-brands fa-youtube"></a></li>
+                        <li><a href="#" class="fa-brands fa-facebook"></a></li>
+                    </ul>
+                </div>
+                <p>At SwimFit Africa we are passionate about teaching people of all ages how to swim and enjoy aquatic activities. We offer a range of classes and activities to help our clients achieve their goals and have fun in water.</p>
+            </div>
+            <span class="navClose fa fa-close" onclick="closeNav()"></span>
+        </div>
+        <span class="openNav fa fa-bars" onclick="openNav()"></span>
     </header>
-    <section class="hero-section">
+    <section class="hero-section" id="home">
         <img src="./static/images/brian-matangelo--BUPaAMSOdE-unsplash.jpg" alt="">
         <div class="slider">
             <div class="slider-container">    
                 <h4>Learn to swim with Confidence!</h4>
                 <h2>Dive into excellence, confidence & Fun</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui repellendus ea eum iste dignissimos fugiat alias animi? Et, aliquam sit autem consectetur omnis numquam.</p>
+                <p>whether you're just starting out, overcoming fear, or training for competitive success. At Swim Fit Republiq, every stroke brings you closer to strength, safety, and self-belief.</p>
                 <div class="button_container">
                     <button><a href="#">Book your first lesson &nbsp; <span class="fa-regular fa-calendar-days"></span></a></button>
-                    <button><a href="#">Explore our classes &nbsp; <span class="fa fa-plus"></span></a></button>
+                    <button><a href="#service">Explore our classes &nbsp; <span class="fa fa-plus"></span></a></button>
                 </div>
             </div>
         </div>
     </section>
-    <section class="about-section">
+    <section class="about-section" id="about">
         <div class="container"> 
             <div class="about-row image-row">
-                <img loading="lazy" src="./static/images/The Competitive Swim Circuit_ An Insider's Look - Into The Swim.jpeg" alt="">
-                <img loading="eager" src="./static/images/Little girl learning to swim in indoor pool with pool board _ Premium Photo.jpeg" alt="">
+                <img loading="lazy" src="./static/images/brian-matangelo-gRof2_Ftu7A-unsplash.jpg" alt="">
+                <img loading="eager" src="./static/images/20230830092756_IMG_3243.jpg" alt="">
                 <div class="about-overlay">
                     <img loading="lazy" src="./static/images/positive-woman-enjoys-water-sport-dressed-black-swimsuit-swimming-hat-goggles-points-free-space-advertises-accessories-diving-prepares-contest-sport-promotion-concept.jpg" alt="">
                     <p>Get proffesional help learning swimming.</p>
@@ -71,28 +96,27 @@
         <div class="container">
             <h4>Why SwimFit Republiq</h4>
             <h2>Why Chose SwimFit Republiq?</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore illum dolor</p>
             <div class="container-fluid">
                 <div class="card">
                     <div class="card-title">
                         <span class="fa fa-cloud"></span>
                         <h2>Expert Coaching</h2>
                     </div>
-                    <p>Certified, experienced instructors passionate about your progress.</p>
+                    <p>Our certified instructors bring years of experience and a deep commitment to your progress.</p>
                 </div>
                 <div class="card">
                     <div class="card-title">
                         <span class="fa fa-cloud"></span>
                         <h2>Proven Techniques</h2>
                     </div>
-                    <p>A structured carriculum designed for fast and effective learning.</p>
+                    <p>We follow a structured curriculum that accelerates learning and builds lifelong skills.</p>
                 </div>
                 <div class="card">
                     <div class="card-title">
                         <span class="fa fa-chain"></span>
                         <h2>Tailored Programs</h2>
                     </div>
-                    <p>From beginner to advance, we cater to all skill levels</p>
+                    <p>From toddlers to adults, beginners to pros—we customize every lesson to your level and goals.</p>
                 </div>
             </div>
             <button><a href="#">Sign up Today</a></button>
@@ -114,21 +138,21 @@
                 <div class="item">
                     <span class="icon fa fa-swimmer"></span>
                     <div class="item-body">
-                        <h2>Adult swim program</h2>
-                        <p>Our instructors use a combination of dicipline and determination to help children overcome their fears and become confident swimmers</p>
+                        <h2>Aqua aerobics classes</h2>
+                        <p>Our experienced instructors will guide you through a variety of exercises that will help you buid strength, improve cadiovascular health and burn calories.</p>
                     </div>
                 </div>
                 <button><a href="#">Schedule now <span class="fa fa-phone"></span></a></button>
             </div>
             <div class="contain_row">
-                <img src="./static/images/Little girl learning to swim in indoor pool with pool board _ Premium Photo.jpeg" alt="">
+                <img src="./static/images/20230830102142_IMG_3341.jpg" alt="">
                 <div class="image_contain">
                     <!-- <img src="./static/images/cute-girl-wearing-bikini.jpg" alt=""> -->
                 </div>
             </div>
         </div>
     </section>
-    <section class="services">
+    <section class="services" id="service">
         <h4>Our Services</h4>
         <div class="service_heading">
             <h2>Learn from the best to become a professional</h2>
@@ -152,18 +176,18 @@
                 </div>
             </div>
             <div class="service_box">
-                <img loading="lazy" src="./static/images/raj-rana-ttzU0sZmkpA-unsplash.jpg" alt="">
+                <img loading="lazy" src="./static/images/richard-r-schunemann-ZmZEkO-pb7M-unsplash.jpg" alt="">
                 <div class="box_body">
-                    <h3>Special Events And Fun Sessions</h3>
-                    <p>Family swim days, water games, and summer programs to keep the excitement going!</p>
+                    <h3>Aqua aerobics & Fitness Training</h3>
+                    <p>Group workouts for strength and stamina.</p>
                     <button>Show Events</button>
                 </div>
             </div>
             <div class="service_box">
-                <img loading="lazy" src="./static/images/raj-rana-ttzU0sZmkpA-unsplash.jpg" alt="">
+                <img loading="lazy" src="./static/images/cycling.jpg" alt="">
                 <div class="box_body">
-                    <h3>Special Events And Fun Sessions</h3>
-                    <p>Family swim days, water games, and summer programs to keep the excitement going!</p>
+                    <h3>Skating & Cycling</h3>
+                    <p>Seasonal outdoor activities to complement aquatic fitness.</p>
                     <button>Show Events</button>
                 </div>
             </div>
@@ -176,17 +200,17 @@
     <section class="border_sec">
         <div class="container">
             <h2>Join the swimming hub</h2>
-                <p>At our swimming school we understand the importance of having a great practitioner teach you on on the skills of swimming. We have qualified dedicated instructors that will help you achieve your goals.</p>
+                <p>We believe great instruction makes all the difference. Our instructors are not just qualified—they’re passionate, patient, and focused on your success.</p>
                 <div class="video_sec">
-                    <img src="./static/images/thomas-park-QGdRrty4054-unsplash.jpg" alt="">
+                    <img src="./static/images/mark-asthoff-fvo0FOblf3s-unsplash.jpg" alt="">
                     <div class="play_btn">
                         <span class="fa fa-play"></span>
                     </div>
                     <div class="offer">
-                        <h2>Get 10% off!</h2>
+                        <h2><strong>Special Offer:</strong> <strong>Get 10% off</strong> your first lesson when you subscribe!</h2>
                     </div>
                     <div class="ot-image">
-                        <img src="./static/images/The Competitive Swim Circuit_ An Insider's Look - Into The Swim.jpeg" alt="">
+                        <img src="./static/images/almos-bechtold-A6TVJBNA-z4-unsplash.jpg" alt="">
                     </div>
                 </div>
                 <div class="button_set">
@@ -195,12 +219,12 @@
                 </div>
         </div>
     </section>
-    <section class="schedule">
+    <section class="schedule" id="schedule">
         <div class="schedule_container">
             <div class="schedule-row">
                 <div class="data">
-                    <h2>Our Schedule</h2>
-                    <p>Itaque asperiores repudiandae ipsa, totam consequuntur harum eius voluptatibus odit culpa omnis voluptas optio expedita nulla.</p>
+                    <h2>Weekly Schedule</h2>
+                    <p>Whether you're joining us at Stedmak Gardens or Sipam Aquatics, each location offers a welcoming environment and expert instruction tailored to your goals. <br> <br> Our weekly schedule is designed to provide consistency, flexibility, and progress—so you can build confidence in the water, one session at a time. Choose the day and venue that fits your lifestyle, and let’s make swimming a joyful part of your weekly rhythm.</p>
                 </div>
                 <div class="table">
                     <div class="table-row">
@@ -209,112 +233,173 @@
                     </div>
                     <div class="table-row">
                         <p>Monday</p>
-                        <p>Stedmak Gardens Karen</p>
+                        <p>Stedmak Gardens, <Strong>Karen</Strong></p>
                     </div>
                     <div class="table-row">
                         <p>Tuesday</p>
-                        <p>Sipam Aquatics Lavington</p>
+                        <p>Sipam Aquatics, <strong>Lavington</strong></p>
                     </div>
                     <div class="table-row">
                         <p>Wednesday</p>
-                        <p>Stedmak Gardens Karen</p>
+                        <p>Stedmak Gardens, <strong>Karen</strong></p>
                     </div>
                     <div class="table-row">
                         <p>Thursday</p>
-                        <p>Sipam Aquatics Lavington</p>
+                        <p>Sipam Aquatics, <strong>Lavington</strong></p>
                     </div>
                     <div class="table-row">
                         <p>Friday</p>
-                        <p>Sipam Aquatics Lavington</p>
+                        <p>Sipam Aquatics, <strong>Lavington</strong></p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="news">
+    <section class="news" id="programs">
         <div class="news_heading" style="width: 100%;">
             <h1>Featured Products</h1>
             <button>View All Products <span class="fa fa-arrow-right"></span></button>
         </div>
         <div class="container news_container">
             <div class="news_box">
-                <img src="./static/images/beautiful-luxury-hotel-swimming-pool-resort.jpg" alt="">
-                <h4>February - Tuesday 23rd</h4>
-                <h2>Luxury swimming pools in Nairobi</h2>
-                <p>The nairobi sports association has partnered with several investors to bring...</p>
+                <img src="./static/images/jesper-stechmann-nb2l7FmbSdA-unsplash.jpg" alt="Three people training under water.">
+                <h4>Land & Water-Based Conditioning</h4>
+                <h2>Fitness & Training</h2>
+                <p class="read-more-text">
+                    Dive into a customized fitness journey designed to elevate your strength, flexibility, and endurance both in and out of the water. Our certified coaches use proven methodologies to ensure safe, effective, and enjoyable workouts suited for all levels.
+                </p>
+                <button class="readMoreBtn read-more-btn">Read more</button>
                 <hr>
-                <button>Read More</button>
+                <button class="ctaBtn">Book session</button>
             </div>
             <div class="news_box">
-                <img src="./static/images/swimming-pool-top-view.jpg" alt="">
-                <h4>February - Tuesday 23rd</h4>
-                <h2>Classy Pools In Kenya</h2>
-                <p>The nairobi sports association has partnered with several investors to bring...</p>
+                <img src="./static/images/young-female-having-fun-training-outdoor.jpg" alt="Young female having training outdoor">
+                <h4>Health & Lifestyle Transformation</h4>
+                <h2>Weight loss training</h2>
+                <p class="read-more-text">
+                    Your transformation starts here. Our holistic program blends nutrition guidance, water-based exercises, and personalized fitness plans to help you achieve sustainable weight loss and a healthier lifestyle—while having fun every step of the way.
+                </p>
+                <button class="readMoreBtn read-more-btn">Read more</button>
                 <hr>
-                <button>Read More</button>
+                <button class="ctaBtn">Book slot</button>
             </div>
             <div class="news_box">
-                <img src="./static/images/stair-swimming-pool-beautiful-luxury-hotel-pool-resort.jpg" alt="">
-                <h4>January - Wednesday 20th</h4>
-                <h2>Why swimming knowledge is important</h2>
-                <p>Although most people might overlook the fact that having swimming knowledge is essential..</p>
+                <img src="./static/images/richard-r-schunemann-ZmZEkO-pb7M-unsplash.jpg" alt="A young man enjoying his aerobics training">
+                <h4>Aquatic Wellness & Cardio</h4>
+                <h2>Aqua aerobics</h2>
+                <p class="read-more-text">
+                    Experience a full-body workout in the pool that’s easy on your joints but tough on calories. These low-impact classes combine cardio, resistance training, and rhythmic movement, led by experts who bring energy and encouragement with every splash.
+                </p>
+                <button class="readMoreBtn read-more-btn">Read more</button>
                 <hr>
-                <button>Read More</button>
+                <button class="ctaBtn">Book slot</button>
+            </div>
+            <div class="news_box">
+                <img src="./static/images/sportive-man-posing-with-towel.jpg" alt="A sportive man posing with towel">
+                <h4>Personal Development & Support</h4>
+                <h2>Mentorship & Motivation</h2>
+                <p class="read-more-text">
+                    More than just workouts—our mentorship program offers inspiration, accountability, and coaching from seasoned professionals to help you stay focused, build confidence, and unlock your full potential in swimming and beyond.
+                </p>
+                <button class="readMoreBtn read-more-btn">Read more</button>
+                <hr>
+                <button class="ctaBtn">Book slot</button>
+            </div>
+            <div class="news_box">
+                <img src="./static/images/cycling.jpg" alt="People cycling through highland roads">
+                <h4>Endurance & Outdoor Training</h4>
+                <h2>Cycling</h2>
+                <p class="read-more-text">
+                    Join our community rides or structured cycling classes aimed at improving endurance, strength, and cardiovascular fitness. Whether on scenic outdoor trails or in curated indoor sessions, you'll pedal your way to peak performance.
+                </p>
+                <button class="read-more-btn readMoreBtn">Read more</b>
+                <button class="ctaBtn">Register now</button>
             </div>
         </div>
+        <script>
+            document.querySelectorAll('.read-more-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const text = button.previousElementSibling;
+                text.classList.toggle('expanded');
+                button.textContent = text.classList.contains('expanded') ? 'Read Less' : 'Read More';
+            });
+            });
+        </script>
     </section>
-    <section class="testimonials">
+    <section class="testimonials" id="testimonial">
         <div class="testimonial-container">
             <div class="testimonial-row">
-                <img src="./static/images/Woman_swim_image.png" alt="">
+                <img class="testimonial-img-desktop" src="./static/images/Woman-pointing.png" alt="happy dark skinned female with charming smile wears swim-wear points aside with thumb">
+                <img class="testimonial-img-mobile" src="./static/images/Woman_swim_image.png" alt="happy dark skinned female with charming smile wears swim-wear points above">
             </div>
             <div class="testimonial-row">
                 <h4>What our clients are saying</h4>
                 <h2>Hear from our happy swimmers</h2>
                 <div class="message-container">
-                    <div class="message">
-                        <div class="message-body">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa ea neque, commodi illo error fuga tenetur est fugiat quos, quidem odit dolore necessitatibus voluptatem aliquam provident amet eligendi similique incidunt!</p>
+                    <div class="container-items">
+                        <div class="message mySlide fade">
+                            <div class="message-body">
+                                <p>“My daughter went from terrified to confident in just a few weeks. The instructors are amazing!”</p>
+                            </div>
+                            <div class="message-address">
+                                <img src="./static/images/positive-woman-enjoys-water-sport-dressed-black-swimsuit-swimming-hat-goggles-points-free-space-advertises-accessories-diving-prepares-contest-sport-promotion-concept.jpg" alt="">
+                                <div class="address-body">
+                                    <h4>Deborah mwangi</h4>
+                                    <p>Parent</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="message-address">
-                            <img src="./static/images/positive-woman-enjoys-water-sport-dressed-black-swimsuit-swimming-hat-goggles-points-free-space-advertises-accessories-diving-prepares-contest-sport-promotion-concept.jpg" alt="">
-                            <div class="address-body">
-                                <h4>Deborah mwangi</h4>
-                                <p>Parent</p>
+                        <div class="message mySlide fade">
+                            <div class="message-body">
+                                <p>“Swim Fit helped me prepare for national competitions. Their training is top-tier.”</p>
+                            </div>
+                            <div class="message-address">
+                                <img src="./static/images/brian-matangelo--BUPaAMSOdE-unsplash.jpg" alt="">
+                                <div class="address-body">
+                                    <h4>Cassel Omondi</h4>
+                                    <p>Swimmer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message mySlide fade">
+                            <div class="message-body">
+                                <p>“Professional, friendly, and results-driven. Highly recommend for families.”</p>
+                            </div>
+                            <div class="message-address">
+                                <img src="./static/images/positive-woman-enjoys-water-sport-dressed-black-swimsuit-swimming-hat-goggles-points-free-space-advertises-accessories-diving-prepares-contest-sport-promotion-concept.jpg" alt="">
+                                <div class="address-body">
+                                    <h4>Peter Kamau</h4>
+                                    <p>Parent</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="message-control">
-                    <span class="fa fa-angle-left"></span>
-                    <span class="fa fa-angle-right"></span>
+                    <span class="fa fa-angle-left" onclick="plusSlides(-1)"></span>
+                    <span class="fa fa-angle-right" onclick="plusSlides(1)"></span>
                 </div>
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contactForm">
         <div class="container">
             <div class="contact-row">
-                <form action="#" method="post">
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email">
-                    <input type="text" placeholder="Subject">
-                    <textarea name="email-message" placeholder="Message" cols="40" rows="5"></textarea>
+                <form action="#" class="contact-form">
+                    <input type="text" placeholder="Your Full Name" required>
+                    <input type="email" placeholder="Your Email Address" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea name="email-message" placeholder="Your Message" cols="40" rows="5" required></textarea>
                     <input type="submit" value="Submit Message">
                 </form>
+                <!-- Add this inside your HTML, below the form -->
+                <div id="form-status" style="margin-top: 1rem; color: green;"></div>
             </div>
             <div class="contact-row">
                 <h4>Get in Touch</h4>
                 <h2>Let's Start Your Swimming Journey!</h2>
-                <p>Need help with booking a lesson or do you have a question for us.</p>
+                <p>Have a question, need help booking your first lesson, or just want to say hello? Fill out the form below and our team will get back to you shortly. We’re here to make your swimming journey smooth, safe, and fun.</p>
                 <div class="icon-container">
-                    <div class="icon-col">
-                        <span class="fa fa-location"></span>
-                        <icon-body>
-                            <h2>Office location</h2>
-                            <p>Ji, Ryokuta15</p>
-                        </icon-body>
-                    </div>
                     <div class="icon-col">
                         <span class="fa fa-phone"></span>
                         <icon-body>
@@ -338,26 +423,27 @@
         <div class="footer-cont">
             <div class="footer-col">
                 <div class="logo">
-                    <h2>Swimmers</h2>
+                    <img src="./static/assets/swim-fit-logo.png" alt="">
+                    <div class="logo-body">
+                        <h2>Swim Fit Republiq</h2>
+                        <p>"Swim fit, fits your life"</p>
+                    </div>
                 </div>
-                <p>20th street Logishu</p>
-                <p>Lancaster Kenya,</p>
-                <p>P.O Box 254-154</p>
+                <p>Nairobi, Kenya</p>
             </div>
             <div class="footer-col">
                 <h2>Quick Links</h2>
                 <ul>
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Services</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Products</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h2>Products</h2>
                 <ul>
                     <li><a href="#">Swimming Classes</a></li>
-                    <li><a href="#">Fun Activities</a></li>
-                    <li><a href="#">Classes</a></li>
+                    <li><a href="#">Activities</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -378,8 +464,8 @@
         </div>
         <hr>
         <div class="copyright">
-            <p>&copy; 2025 Swimmers. All rights reserved</p>
-            <p><strong>Designed By:</strong>  Glocode developers</p>
+            <p>&copy; 2025 Swim Fit Republiq. All rights reserved</p>
+            <p><strong>Designed By:</strong>  Glocode Dev</p>
         </div>
     </footer>
 </body>

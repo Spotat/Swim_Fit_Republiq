@@ -5,6 +5,7 @@
 }
 html {
     scroll-behavior: smooth;
+    scrollbar-width: thin;
 }
 body {}
 header {
@@ -22,14 +23,53 @@ header {
     align-items: center;
     gap: 2rem;
 }
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.nav-other {
+    display: none;
+    align-items: center;
+}
 .nav-link {
     font-family: Sans;
     text-decoration: none;
     color: #333;
     text-transform: capitalize;
-    font-size: 14px;
+    font-size: 15px;
     padding: 8px 10px;
     font-weight: 600;
+    text-wrap: nowrap;
+    transition: all .6s ease;
+    position: relative;
+}
+.nav-link:hover:not(.cta-button) {
+    color: rgb(20, 124, 242);
+    font-weight: 800;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    width: 8px;
+    height: 8px;
+    background: rgba(20, 124, 242, 0.806);
+    border-radius: 50%;
+    left: 40%;
+    transform: translateX(-60%);
+    visibility: hidden;
+    z-index: -99;
+    transition: all .4s ease;
+    opacity: 0;
+}
+.nav-link:not(.cta-button):hover:after {
+    /* display: block; */
+    opacity: 1;
+    visibility: visible;
+    z-index: 99;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .nav-link.cta-button {
     margin-left: 4rem;
@@ -258,9 +298,8 @@ header {
 /* section-3  */
 .section-3 {
     /* background: #add8e646; */
-    background: url(../images/swimming-pool-top-view.jpg) no-repeat;
-    background-position: 0% 45%;
-    background-size: cover;
+    background: url(../images/20230830090857_IMG_3205.jpg) no-repeat;
+    background-position: 20% 60%;
     /* background-attachment: fixed; */
 }
 .section-3 > .container {
@@ -300,7 +339,7 @@ header {
     transform: translateX(-50%);
     bottom: -10px;
     height: 2px;
-    background: white;
+    background: rgb(20, 124, 242);
     width: 80%;
 }
 .section-3 > .container > h2 {
@@ -308,7 +347,8 @@ header {
     font-size: 5vh;
     font-weight: 500;
     text-align: center;
-    color: rgb(20, 124, 242);
+    color: white;
+    /* color: rgb(20, 124, 242); */
     width: 50%;
     margin-top: 2rem;
 }
@@ -402,6 +442,7 @@ header {
     height: 100%;
     max-height: 60vh;
     object-fit: cover;
+    filter: brightness(80%);
 }
 .contain_row > h2 {
     font-family: Sans;
@@ -446,6 +487,10 @@ header {
     background: rgb(20, 124, 242);
     cursor: pointer;
     margin-top: 2rem;
+    transition: all .6s ease;
+}
+.contain_row button:hover {
+    background: rgb(14, 51, 92);
 }
 .contain_row > button > a {
     text-decoration: none;
@@ -687,12 +732,13 @@ header {
     cursor: pointer;
 }
 .video_sec > .offer {
+    width: 300px;
     position: absolute;
     height: fit-content;
     top: -2rem;
     right: -2rem;
     padding: 2rem;
-    background: rgb(20, 124, 242);
+    background: rgba(20, 124, 242, 0.847);
     color: white;
     box-shadow: rgba(0, 0, 0, 0.299) 10px 10px 20px;
 }
@@ -714,6 +760,7 @@ header {
 .offer > h2 {
     font-size: 16px;
     position: relative;
+    text-align: start;
 }
 .offer > h2::after {
     width: 70%;
@@ -896,16 +943,44 @@ header {
     font-weight: 450;
     color: var(--color-text);
     margin-top: 1rem;
+    transition: all .6s ease;
+}
+p.read-more-text {
     --max-lines: 2;
     display: -webkit-box;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: var(--max-lines);
     overflow: hidden;
-      line-height: 1.5; /* Adjusts line spacing */
-      max-height: calc(1.5em * 3); /* Matches the line height for 3 lines */
+    transition: all .6s ease;
+    line-height: 1.5; /* Adjusts line spacing */
+    /* max-height: calc(1.5em * 3); Matches the line height for 3 lines */
+    }
+.read-more-text.expanded {
+  -webkit-line-clamp: unset;
+    transition: all .6s ease;
 }
-.news_box > button {
+.read-more-btn {
+
+}
+.news_box > button.readMoreBtn {
+    width: 100%;
+    text-align: start;
+    font-family: Poppins-Regular;
+    color: rgb(20, 124, 242);
+    text-decoration: underline;
+    font-size: 14px;
+    padding: 0 1rem;
+    border: none;
+    margin: 0;
+    background: none;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.news_box > button.readMoreBtn:hover {
+    text-decoration: none;
+}
+.news_box > button.ctaBtn {
     margin-top: 1rem;
     border: 1px solid rgb(20, 124, 242);
     color: rgb(20, 124, 242);
@@ -913,6 +988,12 @@ header {
     margin-bottom: 1rem;
     width: 90%;
     font-family: Sans;
+    cursor: pointer;
+    transition: all .6s ease;
+}
+.news_box > button.ctaBtn:hover {
+    background: rgb(20, 124, 242);
+    color: white;
 }
 
 /* testimonials section */
@@ -929,12 +1010,15 @@ header {
 .testimonial-row {
     width: 100%;
 }
-.testimonial-row > img {
+.testimonial-row > img.testimonial-img-desktop {
     width: 100%;
     height: 100%;
     max-height: 70vh;
     object-fit: cover;
     object-position: top;
+}
+.testimonial-row > img.testimonial-img-mobile {
+    display: none;
 }
 .testimonial-row > h4 {
     font-family: Sans;
@@ -950,15 +1034,24 @@ header {
 }
 .message-container {
     margin-top: 2rem;
+    overflow-x: hidden;
+}
+.container-items {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    gap: 1rem;
 }
 .message {
     width: 100%;
+    flex: 100%;
+    min-width: 100%;
     display: grid;
-    gap: 1rem;
+    /* gap: 1rem; */
 }
 .message-body {
     padding: 20px;
-    box-shadow: rgba(0, 0, 0, 0.24) 10px 10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.14) 5px 5px 10px;
 }
 .message-body > p {
     font-family: Poppins-Regular;
@@ -968,6 +1061,7 @@ header {
     display: flex;
     align-items: center;
     gap: 2rem;
+    margin-top: 2rem;
 }
 .message-address > img {
     width: 50px;
@@ -1163,7 +1257,7 @@ footer {
     width: 12%;
 }
 .footer-col > h2 {
-    font-family: Roboto;
+    font-family: Poppins-Regular;
     font-size: 17px;
     text-transform: uppercase;
     color: var(--color-primary);
@@ -1172,7 +1266,7 @@ footer {
 .footer-col > p {
     font-size: 14px;
     font-weight: 500;
-    font-family: Roboto;
+    font-family: Sans;
 }
 .footer-col > ul {
     list-style: none;
@@ -1183,7 +1277,7 @@ footer {
 .footer-col:not(.socials) > ul li a {
     text-decoration: none;
     color: var(--color-text);
-    font-family: Roboto;
+    font-family: Sans;
     font-size: 14px;
     text-transform: capitalize;
     font-weight: 600;
